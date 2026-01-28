@@ -1,0 +1,3 @@
+# App-specific ignores are in app/.gitignore
+*.log
+.DS_Store
