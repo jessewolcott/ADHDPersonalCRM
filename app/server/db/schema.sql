@@ -16,9 +16,9 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_users_provider ON users(provider, provider
 CREATE TABLE IF NOT EXISTS sessions (
     sid TEXT PRIMARY KEY,
     sess TEXT NOT NULL,
-    expired INTEGER NOT NULL
+    expire INTEGER NOT NULL
 );
-CREATE INDEX IF NOT EXISTS idx_sessions_expired ON sessions(expired);
+CREATE INDEX IF NOT EXISTS idx_sessions_expire ON sessions(expire);
 
 -- Contacts table
 CREATE TABLE IF NOT EXISTS contacts (
