@@ -12,13 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 CREATE UNIQUE INDEX IF NOT EXISTS idx_users_provider ON users(provider, provider_id) WHERE provider_id IS NOT NULL;
 
--- Sessions table for express-session
-CREATE TABLE IF NOT EXISTS sessions (
-    sid TEXT PRIMARY KEY,
-    sess TEXT NOT NULL,
-    expire INTEGER NOT NULL
-);
-CREATE INDEX IF NOT EXISTS idx_sessions_expire ON sessions(expire);
+-- Sessions table is auto-created by better-sqlite3-session-store
 
 -- Contacts table
 CREATE TABLE IF NOT EXISTS contacts (
